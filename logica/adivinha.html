@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+
+<h3>Digite a senha</h3>
+<input/>
+<button>Fazer login</button>
+
+
+<script>
+    
+    var segredo = 5;
+    var input = document.querySelector("input");
+
+    function verifica() {
+        if(input.value == segredo){    //input.value dá acesso a msg
+            alert("Logado com sucesso!");
+        }else{
+            alert("Senha INVÁLIDA!!!");
+        }
+    }
+
+    var button = document.querySelector("button");
+    button.onclick = verifica; //Sem parenteses mesmo
+
+</script>

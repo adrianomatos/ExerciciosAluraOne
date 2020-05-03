@@ -1,0 +1,50 @@
+<canvas width="1000" height="1000"></canvas>
+
+<script> 
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');   
+    
+    function desenhaQuadrado(posicaoX, posicaoY, cor) {
+        pincel.fillStyle = cor;       //Quadrado
+        pincel.fillRect(posicaoX, posicaoY, 50, 50);
+        pincel.fillStroke = 'black';    //Borda
+        pincel.strokeRect(posicaoX, posicaoY, 50, 50);
+    } 
+
+    /*QUADRADOS DIVERSOS 
+    desenhaQuadrado(0, 0, 'green');
+    desenhaQuadrado(50, 0, 'green');
+    desenhaQuadrado(100, 0, 'yellow');*/
+    
+    //FUNÇÃO 2015
+    var cor = 'red';
+    var outros = 50;
+    var safari = 200+outros;
+    var firefox = 250+safari;
+    var chrome = 500+firefox;
+
+    var x = 0;
+    while(x < 1000){
+        if(x == outros){
+            cor = 'yellow';
+        }
+        if(x == safari){
+            cor = 'green';
+        }
+        if(x == firefox){
+            cor = 'blue';
+        }
+        desenhaQuadrado(10, x, cor);
+        x = x + 10;
+    }
+    
+    pincel.font='25px Georgia';
+    pincel.fillStyle='black';
+    pincel.fillText("5% Outros", 70, 40);
+    pincel.fillText("20% Safari", 70, 150);
+    pincel.fillText("25% Firefox", 70, 400);
+    pincel.fillText("50% Chrome", 70, 750);
+    pincel.font='50px Georgia';
+    pincel.fillText("2015", 10, 1030);
+
+</script>

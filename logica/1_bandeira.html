@@ -1,0 +1,34 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    
+    //QUADRADO
+    pincel.fillStyle = 'lightgrey';     //Tinta
+    pincel.fillRect(0, 0, 600, 400);    //Coordenada
+    
+    //1ª faixa
+    pincel.fillStyle = 'green';         //Tinta
+    pincel.fillRect(0, 0, 200, 400);    //Coordenada
+    
+    //3ª faixa
+    pincel.fillStyle = 'red';           //Tinta
+    pincel.fillRect(400, 0, 200, 400);  //Coordenada
+    
+    //TRIÂNGULO
+    pincel.fillStyle = 'yellow';
+    pincel.beginPath();         //Começa escrita
+    pincel.moveTo(300, 200);
+    pincel.lineTo(200, 400);
+    pincel.lineTo(400, 400);
+    pincel.fill();              //Preencher
+    
+    //CÍRCULO
+    pincel.fillStyle = 'blue';
+    pincel.beginPath();
+    //x,y,raio,angulo_inicial, angulo_final
+    pincel.arc(300, 200, 50, 0, 2 * 3.14);
+    pincel.fill();
+    
+</script>

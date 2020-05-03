@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>Exibir texto digitado</button>
+
+<script>
+    var input = document.querySelector("input");
+
+    function exibeTexto() {
+        if (input.value == "") {
+            alert("Preencha o formulário");
+            //input.value == "Preencha o formulário corretamente";
+        }else{
+            alert("Vc preencheu "+input.value);
+            input.value = "";   //Limpa input
+            input.focus();      //Mantém o cursor
+        }
+    }
+    
+
+    var button = document.querySelector("button");
+    button.onclick = exibeTexto;
+</script>

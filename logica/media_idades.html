@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+<script>
+    
+    function pulaLinha(){
+        document.write("</br>");
+    }
+    
+    function mostra(frase){
+        document.write(frase); 
+        pulaLinha();
+    }
+    
+    var totalFamiliares = parseInt(prompt("Quantidade de familiares?"));
+    mostra("Quantidade de familiares: "+totalFamiliares);
+    mostra("======================");
+
+    var totalIdade = 0;
+    var contador = 1;
+
+    while(contador <= totalFamiliares){
+        var idadeFornecida = parseInt(prompt("Qual a idade do familiar?"));
+        if (idadeFornecida >=110) {
+            mostra("VC forneceu a idade muito alta, FIM DE JOGO!");
+            break; // ou contador = 1000 (contador > totalFamiliares)
+        }
+        var totalIdade = totalIdade + idadeFornecida;
+        mostra("Idade fornecida: "+idadeFornecida);
+        contador++;
+    }
+
+    mostra("======================");
+    mostra("A média das idades é: "+ (parseInt(totalIdade/totalFamiliares)));
+
+</script>

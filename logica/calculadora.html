@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+<script>
+    
+    function pulaLinha(){
+        document.write("</br>");
+    }
+    
+    function mostra(frase){
+        document.write(frase); 
+        pulaLinha();
+    }
+    
+    
+    var calculadora = parseInt(prompt("VC quer a calculadora de qual o número?"));
+    
+    mostra("VC escolheu a calculadora de: "+calculadora);
+    
+    for(var multiplicador = 1; multiplicador <=10; multiplicador ++){
+        var operacao = calculadora * multiplicador;
+        mostra(calculadora+" x "+multiplicador+"= "+operacao);
+    }
+    mostra("FIM");
+  
+</script> 
+
+
+
+
+
+
+
+
+
+
+
+
+
